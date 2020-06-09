@@ -24,8 +24,8 @@
                                 <ul class="list-inline">
                                     <input type="button" name="typeA" value="寄件人" onclick="location.href='Slogin.html'">
                                     <input type="button" name="typeA" value="收件人" onclick="location.href='Rlogin.html'">
-                                    <input type="button" name="typeA" value="物流人員" onclick="location.href='Dwelcome.html'">
-                                    <input type="button" name="typeB" value="管理者" onclick="location.href='mlogin.html'">
+                                    <input type="button" name="typeB" value="物流人員" onclick="location.href='Dwelcome.html'">
+                                    <input type="button" name="typeA" value="管理者" onclick="location.href='mlogin.html'">
                                 </ul>
                             </center>
                         </nav>

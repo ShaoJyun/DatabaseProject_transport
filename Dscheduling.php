@@ -25,8 +25,8 @@
                                 <ul class="list-inline">
                                     <input type="button" name="typeA" value="寄件人" onclick="location.href='Slogin.html'">
                                     <input type="button" name="typeA" value="收件人" onclick="location.href='Rlogin.html'">
-                                    <input type="button" name="typeA" value="物流人員" onclick="location.href='dwelcome.html'">
-                                    <input type="button" name="typeB" value="管理者" onclick="location.href='mlogin.html'">
+                                    <input type="button" name="typeB" value="物流人員" onclick="location.href='dwelcome.html'">
+                                    <input type="button" name="typeA" value="管理者" onclick="location.href='mlogin.html'">
                                 </ul>
                             </center>
                         </nav>
@@ -56,11 +56,13 @@
                         <?php
                             header('Content-Type: text/html; charset=utf-8');
                             echo "<style name=test.css>
-
                             </style>";
+
+							$d_no=$_COOKIE["d_no"];
+
                             require("conn_mysql.php");
 
-                            $data="SELECT d_no,area_no,worktime FROM delivery_man ORDER BY area_no";
+                            $data="SELECT d_no,area_no,worktime FROM delivery_man where d_no='$d_no' ORDER BY area_no";
                             $result1=mysqli_query($db_link,$data) or die("查詢失敗");
 
                             if(mysqli_num_rows($result1))
